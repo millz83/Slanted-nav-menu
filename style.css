@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+    background: grey;
+}
+.nav-area {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    height:60px;
+    display:block;
+    list-style: none;
+
+}
+
+.nav-area li {
+    position: relative;
+    float: left;
+    background:yellow;
+    line-height: 20px;
+    padding:10px 14px;
+    margin-right: 35px;;
+
+}
+
+.nav-area li a {
+    display:block;
+    text-decoration: none;
+    color:rgb(238, 61, 61);
+    text-transform: uppercase;
+}
+
+.nav-area li:first-of-type {
+    margin-left: 30px;
+}
+
+.nav-area li:last-of-type{
+    margin-right: 0;
+}
+
+.nav-area li:before {
+    content:'';
+    position: absolute;
+    background:none;
+    border-left:20px solid transparent;
+    border-right:0px solid transparent;
+    border-top:40px solid yellow;
+    left:-20px;
+    top:0;
+    
+}
+
+.nav-area li:after {
+    content:'';
+    position: absolute;
+    border-left: 0 px solid transparent;
+    border-right:20px solid transparent;
+    border-bottom:40px solid yellow;
+    right:-19px;
+    top:0;
+    width:0;
+    height:0;
+
+}
+
+.nav-area li:first-of-type:before {
+    width:10px;
+    height:40px;
+    background:yellow;
+    left:-10px;
+    border:none;
+}
+
+.nav-area li:hover {
+    cursor: pointer;
+    background:#000;
+}
+
+
+.nav-area li:hover:before {
+    border-top: 40px solid #000;
+}
+
+.nav-area li:hover:after {
+    border-bottom: 40px solid #000;
+}
+
+.nav-area li:first-of-type:hover:before {
+     background:#000;
+     width: 10px;
+     height:0;
+
+}
+
+.nav-area li:last-of-type:after {
+  border:none;
+  width:10px;
+  height:40px;
+  background:yellow;
+  right:-10px;
+}
+
+.nav-area li:last-of-type:hover:after {
+background:#000;
+width:10px;
+height:40px;
+
+}
